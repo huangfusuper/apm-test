@@ -7,8 +7,8 @@ import com.apm.UserService;
  */
 public class JavaTest {
 
-    public static void main(String[] args) {
-        System.out.println("-----测试项目开始执行-----");
+    public static void main(String[] args) throws InterruptedException {
+
         new UserService().sayHello();
     }
 }
