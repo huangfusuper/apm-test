@@ -89,6 +89,6 @@ public class ApmTest {
         } catch (NotFoundException | CannotCompileException e) {
             e.printStackTrace();
         }
-        new UserService().sayHello1("huangfu",12,"huangfu");
+        new UserService().sayHello();
     }
 }
