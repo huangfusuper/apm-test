@@ -1,6 +1,6 @@
 package com.apm.test;
 
-import com.apm.UserService;
+import com.apm.service.UserService;
 import javassist.*;
 import org.junit.Test;
 
@@ -21,7 +21,7 @@ public class ApmTest {
         //获取对应的类
         try {
             String bodyTemp = "{\n\t%s\n\t%s\n\t%s\n\t%s\n}";
-            CtClass ctClass = classPool.get("com.apm.UserService");
+            CtClass ctClass = classPool.get("com.apm.service.UserService");
             CtMethod sayHello = ctClass.getDeclaredMethod("sayHello");
             CtMethod copyMethod = CtNewMethod.copy(sayHello, ctClass, null);
             sayHello.setName(sayHello.getName()+"$javaagent");
@@ -55,7 +55,7 @@ public class ApmTest {
         //获取对应的类
         try {
             String bodyTemp = "{\n\t%s\n\t%s\n\t%s\n\t%s\n}";
-            CtClass ctClass = classPool.get("com.apm.UserService");
+            CtClass ctClass = classPool.get("com.apm.service.UserService");
             CtMethod sayHello = ctClass.getDeclaredMethod("sayHello1");
             CtMethod copyMethod = CtNewMethod.copy(sayHello, ctClass, null);
             sayHello.setName(sayHello.getName()+"$javaagent");
